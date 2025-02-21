@@ -11,6 +11,6 @@ package com.mycompany._matveinikitamartinezisel_pt10_1;
 public class Principal {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("PROVES DE LA CLASSE CAIXA I LA SUBCLASSE CAIXACARTRO");
     }
 }

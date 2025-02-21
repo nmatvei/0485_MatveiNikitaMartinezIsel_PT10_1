@@ -17,7 +17,7 @@ public class Caixa {
     protected String unitats;
     
     /**
-     * Constructor de la classe
+     * Constructor de la classe Caixa
      * 
      * @param ample
      * @param alt
@@ -86,5 +86,15 @@ public class Caixa {
     public double getFondaria(){
         return fondaria;
     }
-    
+
+    /**
+     * Mètode toString per mostrar la informació del objecte
+     * 
+     * @return 
+     */
+    public String toString() {
+        return "Caixa{" + "amplada=" + amplada + ", altura=" + altura + ", "
+                + "fondaria=" + fondaria + ", etiqueta=" + etiqueta + ", "
+                + "unitats=" + unitats + '}';
+    }
 }

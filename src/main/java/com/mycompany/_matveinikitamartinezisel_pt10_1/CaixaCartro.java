@@ -8,6 +8,20 @@ package com.mycompany._matveinikitamartinezisel_pt10_1;
  *
  * @author dam1
  */
-public class CaixaCartro {
-    
+public class CaixaCartro extends Caixa{
+    /**
+     * Constructor de la classe CaixaCartro
+     * 
+     * @param ample
+     * @param alt
+     * @param fons
+     * @param etiqueta
+     * @param unitats 
+     */
+    public CaixaCartro (double ample, double alt, double fons, String etiqueta, String unitats){
+        
+        
+        /*Truquem al contructor de la classe*/
+        super(ample, alt, fons, etiqueta, unitats);
+    }
 }
