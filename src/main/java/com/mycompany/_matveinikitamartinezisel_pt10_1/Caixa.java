@@ -64,17 +64,25 @@ public class Caixa {
     }
     
     /**
-     * 
+     * Mètode GET per conseguir l'amplada
      * @return 
      */
     public double getAmplada(){
         return amplada;
     }
     
+    /**
+     * Mètode GET per conseguir l'altura
+     * @return 
+     */
     public double getAltura(){
         return altura;
     }
     
+    /**
+     * Mètode GET per conseguir la fondaria
+     * @return 
+     */
     public double getFondaria(){
         return fondaria;
     }
