@@ -12,7 +12,7 @@ public class Caixa {
     /*Declaració d'atributs*/
     protected double amplada;
     protected double altura;
-    protected double fons;
+    protected double fondaria;
     protected String etiqueta;
     protected String unitats;
     
@@ -28,7 +28,7 @@ public class Caixa {
     public Caixa(double ample, double alt, double fons, String etiqueta, String unitats){
         this.amplada = ample;
         this.altura = alt;
-        this.fons = fons;
+        this.fondaria = fons;
         this.etiqueta = etiqueta;
         this.unitats = unitats;
     }
@@ -44,13 +44,39 @@ public class Caixa {
         
         /*Comprovem amb quines unitats està declarat l'objecte que estem tractant*/
         if (this.unitats == "m"){
-            volum = (this.amplada * 100) + (this.altura * 100) + (this.fons * 100);
+            volum = (this.amplada * 100) + (this.altura * 100) + (this.fondaria * 100);
         }
         else{
-            volum = this.amplada + this.altura + this.fons;
+            volum = this.amplada + this.altura + this.fondaria;
         }
         
+        /*Retornem el volum*/
         return volum;
+    }
+    
+    /**
+     * Mètode SET per canviar l'etiqueta de la caixa
+     * 
+     * @param etiqueta 
+     */
+    public void setEtiqueta(String etiqueta){
+        this.etiqueta = etiqueta;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public double getAmplada(){
+        return amplada;
+    }
+    
+    public double getAltura(){
+        return altura;
+    }
+    
+    public double getFondaria(){
+        return fondaria;
     }
     
 }
