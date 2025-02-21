@@ -8,7 +8,7 @@ package com.mycompany._matveinikitamartinezisel_pt10_1;
  *
  * @author nikit
  */
-public class App {
+public class Principal {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
