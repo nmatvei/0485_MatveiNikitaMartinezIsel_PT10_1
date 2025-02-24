@@ -5,8 +5,9 @@
 package com.mycompany._matveinikitamartinezisel_pt10_1;
 
 /**
+ * Classe Caixa
  *
- * @author nikit
+ * @author nikita i isel
  */
 public class Caixa {
     /*Declaració d'atributs*/
@@ -40,14 +41,13 @@ public class Caixa {
      */
     public double Volum(){
         /*Declarem la variable volum per guardar el resultat del volum de la caixa*/
-        double volum = 0;
+        double volum= this.amplada + this.altura + this.fondaria;
         
-        /*Comprovem amb quines unitats està declarat l'objecte que estem tractant*/
-        if (this.unitats == "m"){
-            volum = (this.amplada * 100) + (this.altura * 100) + (this.fondaria * 100);
-        }
-        else{
-            volum = this.amplada + this.altura + this.fondaria;
+        /*Comprovem si el volum està en metres per passar el volum a centimentres 
+        cúbics*/
+        if (this.unitats.equalsIgnoreCase("m") || 
+                this.unitats.equalsIgnoreCase("metres")){
+            volum *= 1000000;
         }
         
         /*Retornem el volum*/
@@ -93,8 +93,8 @@ public class Caixa {
      * @return 
      */
     public String toString() {
-        return "Caixa{" + "amplada=" + amplada + ", altura=" + altura + ", "
-                + "fondaria=" + fondaria + ", etiqueta=" + etiqueta + ", "
-                + "unitats=" + unitats + '}';
+        return "Caixa{" + "amplada = " + amplada + ", altura = " + altura + ", "
+                + "fondaria = " + fondaria + ", etiqueta = " + etiqueta + ", "
+                + "unitats = " + unitats + '}';
     }
 }
