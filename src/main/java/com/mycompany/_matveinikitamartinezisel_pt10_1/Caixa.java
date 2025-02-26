@@ -19,6 +19,7 @@ public class Caixa {
     protected String etiqueta;
     protected String unitats;
     final static int PASAR_CC_A_MC = 1000000;
+    final static int LLARGADA_MAX_ETIQUETA = 30;
     
     /**
      * Constructor de la classe Caixa
@@ -32,7 +33,6 @@ public class Caixa {
         /*Declaració de variables i scanner*/
         Scanner sc = new Scanner(System.in);
         boolean demanarDades = false;
-        
         
         /*Bucle While per demanar dades, si es que no cumpleixen certes condicions*/
         while (!demanarDades){
@@ -52,7 +52,7 @@ public class Caixa {
                     System.out.print("Introdueix un altre cop fondaria: ");
                     fons = sc.nextDouble();
                 }
-                else if (etiqueta.length() > 30){
+                else if (etiqueta.length() > LLARGADA_MAX_ETIQUETA){
                     System.out.println("ERROR: Has Introduït una etiqueta massa llarga, torna a introduïrla");
                     System.out.print("Introdueix un altre cop l'etiqueta: ");
                     etiqueta = sc.next();
@@ -100,6 +100,25 @@ public class Caixa {
      * @param etiqueta 
      */
     public void setEtiqueta(String etiqueta){
+        /*Comprovem que la etiqueta no supera la llargada màxima*/
+        if (etiqueta.length() > LLARGADA_MAX_ETIQUETA){
+            
+            /*Declaració de variables i Scanner*/
+            boolean demanarEtiqueta = false;
+            Scanner sc = new Scanner(System.in);
+            
+            /*Estructura WHILE per demanar la etiqueta les vegades que fagi falta*/
+            while(!demanarEtiqueta){
+                System.out.println("ERROR: Has Introduït una etiqueta massa "
+                        + "llarga, torna a introduïrla ");
+                System.out.print("Introdueix un altre cop l'etiqueta: ");
+                etiqueta = sc.next();
+                
+                if (etiqueta.length() <= LLARGADA_MAX_ETIQUETA){
+                    demanarEtiqueta = true;
+                }
+            }
+        }
         this.etiqueta = etiqueta;
     }
     

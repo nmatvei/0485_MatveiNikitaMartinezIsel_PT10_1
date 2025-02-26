@@ -20,8 +20,6 @@ public class Principal {
         System.out.println("\t\tAltura de la caixa: " + caixaCentimetres.getAltura());
         System.out.println("\t\tFondaria de la caixa: " + caixaCentimetres.getFondaria());
         System.out.println("\t\tVolum de la caixa (en c.c.): " + caixaCentimetres.Volum());
-        /*System.out.println("\t\tCanviem l'etiqueta de la caixa (en c.c.): " 
-                + caixaCentimetres.setEtiqueta("Remitent: Correos, Receptor: Joan López"));*/
         System.out.println("\t\tConseguim totes les dades de la caixa amb el toString: " 
                 + caixaCentimetres.toString());
         
@@ -31,8 +29,6 @@ public class Principal {
         System.out.println("\t\tAltura de la caixa: " + caixaMetres.getAltura());
         System.out.println("\t\tFondaria de la caixa: " + caixaMetres.getFondaria());
         System.out.println("\t\tVolum de la caixa (en c.c.): " + caixaMetres.Volum());
-        /*System.out.println("\t\tCanviem l'etiqueta de la caixa (en c.c.): " 
-                + caixaMetres.setEtiqueta("Remitent: Correos, Receptor: Joan López"));*/
         System.out.println("\t\tConseguim totes les dades de la caixa amb el toString: " 
                 + caixaMetres.toString());
     }
